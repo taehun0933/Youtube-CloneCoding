@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Mobile</title>
+  </head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="clonning.css" />
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- 맨 위에 존재하면서 로고를 통한 소개 및 탐색 기능 제공. 떄문에 header태그 사용 -->
+      <div class="logo">
+        <i class="fab fa-youtube"></i>
+        <span class="title">Youtube</span>
+      </div>
+      <div class="icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-ellipsis-v"></i>
+      </div>
+    </header>
+
+    <!-- video Player -->
+    <section class="player">
+      <video controls src="../videos/Munzi.mov"></video>
+    </section>
+
+    <div class="infoAndUpNext">
+      <!-- video Information -->
+      <section class="info">
+        <div class="info__metadata">
+          <!-- 동영상의 해쉬태그, 제목, 조회수 등 여러 메타데이터를 제공하므로 클래스명은 metadata -->
+          <ul class="metadata__hashtags">
+            <li>#DreamCoding</li>
+            <li>#DreamCoders</li>
+            <li>#Ellie</li>
+          </ul>
+          <div class="metadata__titleAndSpanBtn">
+            <span class="titleAndSpanBtn__title clamp">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              porro provident soluta ipsa assumenda maiores obcaecati.
+              Aspernatur quia, mollitia harum quasi perspiciatis voluptatibus
+              dolore iure non similique, dicta, expedita consequuntur?
+            </span>
+            <button class="titleAndSpanBtn__spanBtn">
+              <i class="fas fa-caret-down"></i>
+            </button>
+          </div>
+          <span class="metadata__views">1M views</span>
+          <span class="metadata__ago">1 month ago</span>
+        </div>
+        <ul class="info__actions">
+          <!-- 해당 동영상에 대해 유저가 취할 수 있는 행동들을 나타내므로 클래스명은 actions -->
+          <li>
+            <button>
+              <i class="active fas fa-thumbs-up"></i>
+              <span>1K</span>
+            </button>
+          </li>
+          <li>
+            <button>
+              <i class="fas fa-thumbs-down"></i>
+              <span>0</span>
+            </button>
+          </li>
+          <li>
+            <button>
+              <i class="fas fa-share"></i>
+              <span>Share</span>
+            </button>
+          </li>
+          <li>
+            <button>
+              <i class="fas fa-plus"></i>
+              <span>Save</span>
+            </button>
+          </li>
+          <li>
+            <button>
+              <i class="fab fa-font-awesome-flag"></i>
+              <span>Report</span>
+            </button>
+          </li>
+        </ul>
+        <div class="info__channel">
+          <!-- 영상을 올린 채널에 대해 나타내므로 클래스명은 channel -->
+          <div class="channel__metadata">
+            <img src="../images/channel_avatar.png" />
+            <div class="metadata__nameAndSubs">
+              <span class="metadata__channelName">드림코딩 by 엘리</span>
+              <span class="metadata__subscribers">1M subscribers</span>
+            </div>
+          </div>
+          <button class="channel__subscribeBtn">subscribe</button>
+        </div>
+      </section>
+
+      <!-- Recommended videos -->
+      <section class="upNext">
+        <span class="upNext__title">Up next</span>
+        <ul class="upNext__videos">
+          <li class="videos__video">
+            <div class="video__img">
+              <img src="../images/image1.webp" />
+            </div>
+            <div class="video__metadata">
+              <span class="metadata__title">
+                프론트엔드 강의, 프론트엔드 개발자가 되고 싶다면? 웹개발
+                입문자편 강의를 시작합니다 ⭐️ (HTML, CSS, Javascript + 실전
+                프로젝트)
+              </span>
+              <span class="metadata__channelName">드림코딩 by 엘리</span>
+              <span class="metadata__views">82K views</span>
+            </div>
+            <button>
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </li>
+          <li class="videos__video">
+            <div class="video__img">
+              <img src="../images/image2.webp" />
+            </div>
+            <div class="video__metadata">
+              <span class="metadata__title">
+                HTML 기초, React 할때 꼭 필요한 팁! 쉽다고 무시하면 안돼요 |
+                프론트엔드 개발자 입문편: HTML, CSS, Javascript
+              </span>
+              <span class="metadata__channelName">드림코딩 by 엘리</span>
+              <span class="metadata__views">79K views</span>
+            </div>
+            <button>
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </li>
+          <li class="videos__video">
+            <div class="video__img">
+              <img src="../images/image3.webp" />
+            </div>
+            <div class="video__metadata">
+              <span class="metadata__title">
+                HTML 태그 완성, 웹 포트폴리오 만들기 전에 꼭 보세요 | 프론트엔드
+                개발자 입문편: HTML, CSS, Javascript
+              </span>
+              <span class="metadata__channelName">드림코딩 by 엘리</span>
+              <span class="metadata__views">85K views</span>
+            </div>
+            <button>
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+  <script src="clonning.js"></script>
+  <script
+    src="https://kit.fontawesome.com/55a0a99732.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

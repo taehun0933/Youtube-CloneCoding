@@ -1,0 +1,263 @@
+:root {
+  /* Color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* Size */
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: inherit;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+header .logo {
+  font-size: var(--font-large);
+}
+
+header .logo i {
+  color: var(--red-color);
+}
+
+header .icons i:first-child {
+  margin-right: var(--padding);
+}
+
+/* video Player */
+.player {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
+}
+
+.player video {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
+
+/* info */
+.info {
+  padding: var(--padding);
+}
+
+.metadata__hashtags {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+
+.metadata__hashtags li {
+  margin-right: var(--padding);
+}
+
+.metadata__titleAndSpanBtn {
+  display: flex;
+}
+
+.titleAndSpanBtn__title {
+  font-size: var(--font-medium);
+  margin-right: var(--padding);
+}
+
+.titleAndSpanBtn__title.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.titleAndSpanBtn__spanBtn {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.titleAndSpanBtn__spanBtn.flipped {
+  transform: rotate(180deg);
+}
+
+.info__metadata .metadata__views,
+.info__metadata .metadata__ago {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info__actions {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding) 0;
+}
+
+.info__actions button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  text-align: center;
+  color: var(--grey-dark-color);
+}
+
+.info__actions button i {
+  margin: 0px auto;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: 16px;
+}
+
+.info__actions button i.active {
+  color: var(--blue-color);
+}
+
+.info__channel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--padding) 0;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.info__channel .channel__metadata {
+  display: flex;
+  align-items: center;
+}
+
+.info__channel .channel__metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.info__channel .channel__metadata .metadata__nameAndSubs {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__channel .metadata__nameAndSubs .metadata__channelName {
+  font-size: var(--font-medium);
+}
+
+.info__channel .metadata__nameAndSubs .metadata__subscribers {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info__channel .channel__subscribeBtn {
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+
+/* Up Next */
+
+.upNext {
+  padding: 0px var(--padding);
+}
+
+.upNext .upNext__title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+}
+
+.upNext .videos__video {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+/*
+    flex container의 내부 요소들에
+    flex-grow, flex-shrink, flex-basis 속성을 지정해줄 수 있다.
+    이 세 요소를 단축 속성, flex를 통해 한번에 지정해줄 수 있다.
+
+    flex-grow : flex container의 남은 여백을 채우기 위해 존재하는 속성. 
+    남은 여백을 flex-grow가 주어진 요소들을 그 비율대로 늘리며 채운다. 0이 기본값.
+
+    flex-shrink : flex-grow와 반대의 속성으로, flex container보다 
+    그 요소들의 크기의 합이 커질 경우 크기를 맞춰주기 위해 존재하는 속성.
+    flex-shrink가 양수인 요소들을 그 비율대로 맞추어 줄인다.
+    1이 기본값 => 별도로 값을 0으로 지정해주지 않는 이상 무조건 줄어듦
+
+    flex-basis : width와 비슷, 크기 지정.    
+*/
+
+.upNext .videos__video .video__img {
+  flex: 35%;
+  /* flex : 1 1 35%와 동일 */
+  margin-right: var(--padding);
+}
+
+.upNext .videos__video .video__img img {
+  width: 100%;
+}
+
+.upNext .videos__video .video__metadata {
+  flex: 60%;
+}
+
+.upNext .videos__video button {
+  flex: 5%;
+}
+
+.video__metadata {
+  display: flex;
+  flex-direction: column;
+}
+
+.video__metadata .metadata__title {
+  font-size: var(--font-medium);
+}
+
+.video__metadata .metadata__channelName,
+.video__metadata .metadata__views {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+}
+
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndUpNext {
+    flex-direction: row;
+    margin: var(--padding);
+  }
+}
